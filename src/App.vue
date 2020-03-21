@@ -4,7 +4,7 @@
             <h1>
                 Mapa COVID-19 Brasil 
                 <div>
-                    by: <a href="http://github.com/yurematias">yurematias</a>
+                    desenvoldio por: <a href="http://github.com/yurematias">Yure Matias</a>
                 </div> 
             </h1>
         </div>
