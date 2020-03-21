@@ -65,7 +65,7 @@ export default {
     methods: {
         setCovidInfo(statesArray) {
             for (let i = 0; i < statesArray.length; i++) {
-                this.states[statesArray[i].uf.toLowerCase()].confirmedCases = statesArray[i].cases;
+                this.states[statesArray[i].uf.toLowerCase()].setConfirmedCases(statesArray[i].cases);
                 this.states[statesArray[i].uf.toLowerCase()].suspiciousCases = statesArray[i].suspects;
                 this.states[statesArray[i].uf.toLowerCase()].deaths = statesArray[i].deaths;
                 this.states[statesArray[i].uf.toLowerCase()].name = statesArray[i].state;
