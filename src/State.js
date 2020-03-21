@@ -7,6 +7,7 @@ class State {
         this.confirmedCases = confirmedCases;
         this.suspiciousCases = suspiciousCases;
         this.deaths = deaths;
+        this.setStyle();
     }
 
     setConfirmedCases(confirmedCases) {
