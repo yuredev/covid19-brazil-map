@@ -2,7 +2,9 @@
     <div id="app">
         <div class="display">
             <h1>
-                Mapa COVID-19 Brasil 
+                <div class="title">
+                    Mapa COVID-19 Brasil
+                </div>   
                 <div>
                     Por: <a href="http://github.com/yurematias"> Yure Matias</a>
                 </div> 
@@ -29,6 +31,13 @@ export default {
         justify-content: center;
     }
 
+        
+    @media (max-width: 600px) {
+        .title {
+            display: none;
+        }
+    }
+
     h1{
         display: flex;
         justify-content: space-evenly;
@@ -42,12 +51,4 @@ export default {
         border: 0;
         margin: 0;
     }
-    /* #app{
-        background-color: rgb(179, 1, 1);
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    } */
 </style>
