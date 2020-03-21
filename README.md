@@ -1,4 +1,6 @@
-# test-vue-leaflet
+# brazil-covid-19-map
+
+Access in https://brazilcovid19map.netlify.com/
 
 ## Project setup
 ```
