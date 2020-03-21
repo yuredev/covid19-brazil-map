@@ -71,7 +71,7 @@ export default {
                 this.states[statesArray[i].uf.toLowerCase()].name = statesArray[i].state;
                 this.states[statesArray[i].uf.toLowerCase()].refuses = statesArray[i].refuses;
             }
-        }
+        }  
     }
 }
 </script>
