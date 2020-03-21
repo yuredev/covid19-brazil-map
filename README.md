@@ -1,5 +1,7 @@
 # brazil-covid-19-map
 
+![demonstration](src/assets/print.JPG)
+
 ### Access in https://brazilcovid19map.netlify.com/
 ### Data taked from the API: https://github.com/devarthurribeiro/covid19-brazil-api
 
