@@ -1,18 +1,29 @@
 <template>
     <div>
-        <template v-for="(value, key) of states">
-            <LCircle v-bind="states[key]" :key="key"/>
+        <template v-for="(state, key) of states">
+            <LCircle v-bind="states[key]" :key="key"> 
+                <LPopup>
+                    <p>
+                        <strong>{{key.toUpperCase()}}</strong> <br />
+                        Casos confirmados: {{state.confirmedCases}} <br />
+                        Casos suspeitos: {{state.suspiciousCases}} <br />
+                        Mortes: {{state.deaths}} 
+                    </p>
+                </LPopup>
+
+            </LCircle>
         </template>
     </div>
 </template>
 
 <script>
 
+
 import State from '../State';
-import { LCircle } from 'vue2-leaflet';
+import { LCircle, LPopup } from 'vue2-leaflet';
 
 export default {
-    components: { LCircle },
+    components: { LCircle, LPopup },
     data() {
         return {
             states: {
