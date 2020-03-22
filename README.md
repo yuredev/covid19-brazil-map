@@ -6,7 +6,7 @@
     <img src="src/assets/print.JPG" />
 </div>
 
-Access in: [Brazil Covid 19 Map](https://brazilcovid19map.netlify.com) 
+Access in: [https://brazilcovid19map.netlify.com](https://brazilcovid19map.netlify.com) 
 
 Data taked from the API: [devarthurribeiro/covid19-brazil-api](https://github.com/devarthurribeiro/covid19-brazil-api) 
 
