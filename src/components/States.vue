@@ -60,7 +60,6 @@ export default {
         const url = 'https://covid19-brazil-api.now.sh/api/report/v1';
         const res = await fetch(url);
         const states = await res.json();
-        // alert(states);
         this.setCovidInfo(states.data);
     },
     methods: {
