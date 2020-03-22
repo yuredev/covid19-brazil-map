@@ -4,30 +4,40 @@
       :zoom="zoom"
       :center="center"
       :options="mapOptions"
-      style="height: 100%"
+      style="height: 80%"
       @update:center="centerUpdate"
       @update:zoom="zoomUpdate"
     >
-    <StatesCircles />
+      <l-tile-layer
+        :url="url"
+        :attribution="attribution"
+      />
+      <States />
     </LMap>
   </div>
 </template>
 
 <script>
 import { latLng } from "leaflet";
-import { LMap } from "vue2-leaflet";
-import StatesCircles from './StatesCircles';
+import { LMap, LTileLayer } from "vue2-leaflet";
+import States from './States';
 
 export default {
   components: {
     LMap,
-    StatesCircles
+    LTileLayer,
+    States
   },
   data() {
     return {
       statesData: undefined,
       zoom: 4.7,
       center: latLng(-18.781325, -40.650391),
+      url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      attribution:
+        '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+      withPopup: latLng(47.41322, -1.219482),
+      withTooltip: latLng(47.41422, -1.250482),
       currentZoom: 11.5,
       mapOptions: {
         zoomSnap: 0.5
@@ -41,6 +51,12 @@ export default {
     centerUpdate(center) {
       this.currentCenter = center;
     },
+    showLongText() {
+      this.showParagraph = !this.showParagraph;
+    },
+    innerClick() {
+      alert("Click!");
+    }
   }
 };
 </script>
@@ -50,10 +66,7 @@ export default {
 #map {
   position: absolute;
   z-index: 1;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  height: 100%;
+  height: 900px;
   width: 100%;
 }
   
