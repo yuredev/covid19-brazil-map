@@ -7,10 +7,12 @@
 </div>
 
 <p> 
-    <strong> Access in: </strong> [brazilcovid19map.netlify.com](https://brazilcovid19map.netlify.com) 
+    <strong> Access in: </strong> 
+    <a href="https://brazilcovid19map.netlify.com">brazilcovid19map.netlify.com</a>
 </p>
 <p>
-    <strong> Origin of data: </strong> [devarthurribeiro/covid19-brazil-api](https://github.com/devarthurribeiro/covid19-brazil-api) 
+    <strong> Origin of data: </strong> 
+    <a href="https://github.com/devarthurribeiro/covid19-brazil-api">devarthurribeiro/covid19-brazil-api</a>
 </p>
 
 ## Project setup
