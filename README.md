@@ -6,8 +6,12 @@
     <img src="src/assets/print.JPG" />
 </div>
 
-<strong> Access in: </strong> [brazilcovid19map.netlify.com](https://brazilcovid19map.netlify.com) <br />
-<strong> Origin of data: </strong> [devarthurribeiro/covid19-brazil-api](https://github.com/devarthurribeiro/covid19-brazil-api) 
+<p> 
+    <strong> Access in: </strong> [brazilcovid19map.netlify.com](https://brazilcovid19map.netlify.com) <br />
+</p>
+<p>
+    <strong> Origin of data: </strong> [devarthurribeiro/covid19-brazil-api](https://github.com/devarthurribeiro/covid19-brazil-api) 
+</p>
 
 ## Project setup
 ```
