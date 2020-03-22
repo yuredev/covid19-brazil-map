@@ -4,7 +4,7 @@
       :zoom="zoom"
       :center="center"
       :options="mapOptions"
-      style="height: 80%"
+      style="height: 100%"
       @update:center="centerUpdate"
       @update:zoom="zoomUpdate"
     >
@@ -66,7 +66,10 @@ export default {
 #map {
   position: absolute;
   z-index: 1;
-  height: 900px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
   width: 100%;
 }
   

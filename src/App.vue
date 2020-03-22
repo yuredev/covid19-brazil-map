@@ -26,13 +26,23 @@ export default {
 
 <style scoped>
 
+    #app{
+        margin: 0;
+        border: 0;
+        padding: 0;
+    }
+
     .display{
         display: flex;
         justify-content: center;
     }
 
-        
-    @media (max-width: 600px) {
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    @media (max-width: 800px) {
         .title {
             display: none;
         }
@@ -43,8 +53,8 @@ export default {
         justify-content: space-evenly;
         width: 50%;
         position: absolute;
-        z-index: 99;
-        font-size: 1.4rem;
+        z-index: 2;
+        font-size: 1.2rem;
         font-family: 'Roboto', cursive;
         padding: 2px;   
         background-color: rgba(220, 20, 60, 0.274);
