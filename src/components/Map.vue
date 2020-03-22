@@ -8,36 +8,26 @@
       @update:center="centerUpdate"
       @update:zoom="zoomUpdate"
     >
-      <l-tile-layer
-        :url="url"
-        :attribution="attribution"
-      />
-      <States />
+    <StatesCircles />
     </LMap>
   </div>
 </template>
 
 <script>
 import { latLng } from "leaflet";
-import { LMap, LTileLayer } from "vue2-leaflet";
-import States from './States';
+import { LMap } from "vue2-leaflet";
+import StatesCircles from './StatesCircles';
 
 export default {
   components: {
     LMap,
-    LTileLayer,
-    States
+    StatesCircles
   },
   data() {
     return {
       statesData: undefined,
       zoom: 4.7,
       center: latLng(-18.781325, -40.650391),
-      url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-      attribution:
-        '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-      withPopup: latLng(47.41322, -1.219482),
-      withTooltip: latLng(47.41422, -1.250482),
       currentZoom: 11.5,
       mapOptions: {
         zoomSnap: 0.5
@@ -51,12 +41,6 @@ export default {
     centerUpdate(center) {
       this.currentCenter = center;
     },
-    showLongText() {
-      this.showParagraph = !this.showParagraph;
-    },
-    innerClick() {
-      alert("Click!");
-    }
   }
 };
 </script>
