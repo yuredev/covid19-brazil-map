@@ -1,9 +1,18 @@
-# brazil-covid-19-map
+<h1 align="center">
+    Brazil Covid19 Map
+</h1>
 
-![demonstration](src/assets/print.JPG)
+<div align="center">
+    <img src="stc/assets/print.JPG" />
+</div>
 
-### Access in https://brazilcovid19map.netlify.com/
-### Data taked from the API: https://github.com/devarthurribeiro/covid19-brazil-api
+<!-- ![demonstration](src/assets/print.JPG) -->
+
+Access in: 
+- [CSSEGISandData](https://brazilcovid19map.netlify.com) 
+
+Data taked from the API: 
+- [CSSEGISandData](https://github.com/devarthurribeiro/covid19-brazil-api) 
 
 ## Project setup
 ```
