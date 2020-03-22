@@ -3,10 +3,8 @@
 </h1>
 
 <div align="center">
-    <img src="stc/assets/print.JPG" />
+    <img src="src/assets/print.JPG" />
 </div>
-
-<!-- ![demonstration](src/assets/print.JPG) -->
 
 Access in: 
 - [CSSEGISandData](https://brazilcovid19map.netlify.com) 
