@@ -7,10 +7,10 @@
 </div>
 
 Access in: 
-- [CSSEGISandData](https://brazilcovid19map.netlify.com) 
+- [Brazil Covid 19 Map](https://brazilcovid19map.netlify.com) 
 
 Data taked from the API: 
-- [CSSEGISandData](https://github.com/devarthurribeiro/covid19-brazil-api) 
+- [devarthurribeiro/covid19-brazil-api](https://github.com/devarthurribeiro/covid19-brazil-api) 
 
 ## Project setup
 ```
