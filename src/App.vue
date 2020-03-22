@@ -44,7 +44,7 @@ export default {
         width: 50%;
         position: absolute;
         z-index: 99;
-        font-size: 1.4rem;
+        font-size: 1.1rem;
         font-family: 'Roboto', cursive;
         padding: 2px;   
         background-color: rgba(220, 20, 60, 0.274);
