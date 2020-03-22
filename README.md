@@ -7,7 +7,7 @@
 </div>
 
 <p> 
-    <strong> Access in: </strong> [brazilcovid19map.netlify.com](https://brazilcovid19map.netlify.com) <br />
+    <strong> Access in: </strong> [brazilcovid19map.netlify.com](https://brazilcovid19map.netlify.com) 
 </p>
 <p>
     <strong> Origin of data: </strong> [devarthurribeiro/covid19-brazil-api](https://github.com/devarthurribeiro/covid19-brazil-api) 
