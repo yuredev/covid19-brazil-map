@@ -41,11 +41,6 @@ export default {
         display: flex;
         justify-content: center;
     }   
-    @media (max-width: 600px) {
-        .pane {
-            display: none;
-        }
-    }
     .info{
         position: fixed;
         display: flex;
@@ -61,5 +56,12 @@ export default {
         border-style: dotted;
         border-color: rgb(100, 0, 0);
         margin: 0;
+    }
+    @media (max-width: 600px) {
+        div.pane > div.info {
+            justify-content: space-between;
+            width: 75%;
+            font-size: 0.8rem;
+        }
     }
 </style>

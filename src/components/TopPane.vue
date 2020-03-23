@@ -7,7 +7,7 @@
             <div>
                 Mortes: {{brazilData.deaths}}
             </div> 
-            <div>
+            <div class="recovered">
                 Recuperados: {{brazilData.recovered}}
             </div>
         </div>

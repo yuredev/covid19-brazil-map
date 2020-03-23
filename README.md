@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-    <img src="src/assets/print.JPG" />
+    <img src="public/print.JPG" />
 </p>
 
 <p> 
