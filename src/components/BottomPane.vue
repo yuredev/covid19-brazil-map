@@ -39,7 +39,6 @@ a{
 }
 
 div.info {
-    width: 60%;
     bottom: 0;
 }
 
