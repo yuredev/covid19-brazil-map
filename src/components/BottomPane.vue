@@ -26,10 +26,7 @@ export default {
             let year = date[0];
             let month = date[1];
             let day = date[2];
-            let hour = date[3];
-            let minutes = date[4];
-            let seconds = date[5];
-            return `${day}/${month}/${year} as ${hour}:${minutes}:${seconds}`;
+            return `${day}/${month}/${year}`;
         }
     }
 }
