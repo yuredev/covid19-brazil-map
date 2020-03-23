@@ -45,7 +45,7 @@ export default {
 
         
     @media (max-width: 600px) {
-        .title {
+        .display {
             display: none;
         }
     }
