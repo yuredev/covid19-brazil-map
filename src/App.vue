@@ -1,66 +1,65 @@
 <template>
     <div id="app">
-        <div class="display">
-            <h1>
-                <div class="title">
-                    Casos no Brasil: {{brazilCases}}
-                </div>   
-                <div>
-                    Mortes: {{brazilDeaths}}
-                </div> 
-            </h1>
-        </div>
+        <TopPane :brazilData="brazilData" />
         <Map />
+        <BottomPane :updatedAt="updatedAt" />
     </div>
 </template>
 
 <script>
 import Map from './components/Map';
+import TopPane from './components/TopPane';
+import BottomPane from './components/BottomPane';
 
 export default {
-    components: {
-        Map
+    components: { 
+        Map, 
+        TopPane,
+        BottomPane
     },
     data() {
         return {
-            brazilCases: undefined,
-            brazilDeaths: undefined
+            brazilData: {
+                cases: undefined,
+                deaths: undefined,
+                recovered: undefined,
+            },
+            updatedAt: new String()
         }
     },
     async mounted() {
         let res = await fetch('https://covid19-brazil-api.now.sh/api/report/v1/brazil');
-        let data = await res.json();
-        this.brazilCases = data.data.cases;
-        this.brazilDeaths = data.data.deaths;
-    },
+        let brazil = await res.json();
+        this.updatedAt = brazil.data.updated_at;
+        this.brazilData = brazil.data;
+    }, 
 }
 </script>
 
-<style scoped>
-
-    .display{
+<style>
+    .pane{
         display: flex;
         justify-content: center;
-    }
-
-        
+    }   
     @media (max-width: 600px) {
-        .display {
+        .pane {
             display: none;
         }
     }
-
-    h1{
+    .info{
+        position: fixed;
         display: flex;
         justify-content: space-evenly;
         width: 50%;
-        position: absolute;
-        z-index: 99;
+        z-index: 2;
         font-size: 1.1rem;
         font-family: 'Roboto', cursive;
         padding: 2px;   
-        background-color: rgba(220, 20, 60, 0.274);
-        border: 0;
+        background-color: rgba(220, 20, 60, 0.35);
+        border: 1px;
+        border-radius: 2px;
+        border-style: dotted;
+        border-color: rgb(100, 0, 0);
         margin: 0;
     }
 </style>
