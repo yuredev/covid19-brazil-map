@@ -57,8 +57,7 @@ export default {
         }
     }, 
     async mounted() {
-        const url = 'https://covid19-brazil-api.now.sh/api/report/v1';
-        const res = await fetch(url);
+        const res = await fetch('https://covid19-brazil-api.now.sh/api/report/v1');
         const states = await res.json();
         this.setCovidInfo(states.data);
     },

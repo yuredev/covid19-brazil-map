@@ -3,10 +3,10 @@
         <div class="display">
             <h1>
                 <div class="title">
-                    Mapa COVID-19 Brasil
+                    Casos no Brasil: {{brazilCases}}
                 </div>   
                 <div>
-                    Por: <a href="http://github.com/yurematias"> Yure Matias</a>
+                    Mortes: {{brazilDeaths}}
                 </div> 
             </h1>
         </div>
@@ -20,7 +20,19 @@ import Map from './components/Map';
 export default {
     components: {
         Map
-    }
+    },
+    data() {
+        return {
+            brazilCases: undefined,
+            brazilDeaths: undefined
+        }
+    },
+    async mounted() {
+        let res = await fetch('https://covid19-brazil-api.now.sh/api/report/v1/brazil');
+        let data = await res.json();
+        this.brazilCases = data.data.cases;
+        this.brazilDeaths = data.data.deaths;
+    },
 }
 </script>
 
