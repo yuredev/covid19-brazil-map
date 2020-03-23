@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="src/assets/icon.png" width="25px"/> Brazil COVID-19 Map
+    <img src="src/assets/icon.png" width="25px"/> COVID-19 Brazil Map
 </h1>
 
 <p align="center">
