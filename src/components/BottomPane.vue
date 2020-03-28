@@ -38,8 +38,21 @@ a{
     color: black;
 }
 
-div.info {
+div.pane > div.info {
     bottom: 0;
+}
+
+@media (max-width: 600px) {
+    div.pane > div.info {
+        width: 90%;
+        background-color: rgba(220, 120, 160, 0.9);
+        box-sizing: border-box;
+        border-style: none;
+        border-top-style: dotted;
+        border-top-color: rgb(100, 0, 0);
+        padding: 4px 4px;
+        font-size: 0.74rem;
+    }
 }
 
 </style>
