@@ -12,7 +12,7 @@
         :url="url"
         :attribution="attribution"
       />
-      <States />
+      <States :statesData="states"/>
     </LMap>
   </div>
 </template>
@@ -41,6 +41,7 @@ export default {
       },
     };
   },
+  props: ['states'],
   methods: {
     zoomUpdate(zoom) {
       this.currentZoom = zoom;

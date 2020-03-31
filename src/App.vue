@@ -1,6 +1,7 @@
 <template>
     <div id="app">
         <TopPane :brazilData="brazilData" />
+        <Ranking />
         <Map />
         <BottomPane :updatedAt="updatedAt" />
     </div>
@@ -10,26 +11,27 @@
 import Map from './components/Map';
 import TopPane from './components/TopPane';
 import BottomPane from './components/BottomPane';
+import Ranking from './components/Ranking';
 
 export default {
     components: { 
         Map, 
         TopPane,
-        BottomPane
+        BottomPane,
+        Ranking
     },
     data() {
         return {
             brazilData: {
                 cases: undefined,
                 deaths: undefined,
-                recovered: undefined,
             },
             updatedAt: new String()
         }
     },
     async mounted() {
-        let res = await fetch('https://covid19-brazil-api.now.sh/api/report/v1/brazil');
-        let brazil = await res.json();
+        const res = await fetch('https://covid19-brazil-api.now.sh/api/report/v1/brazil');
+        const brazil = await res.json();
         this.updatedAt = brazil.data.updated_at;
         this.brazilData = brazil.data;
     }, 
@@ -37,15 +39,18 @@ export default {
 </script>
 
 <style>
+    * {
+        user-select: none;
+    }
     .pane{
         display: flex;
         justify-content: center;
     }   
-    .info{
+    .pane > .info{
         position: fixed;
         display: flex;
         justify-content: space-evenly;
-        width: 50%;
+        width: 30%;
         z-index: 2;
         font-size: 1.1rem;
         font-family: 'Roboto', cursive;
@@ -59,8 +64,7 @@ export default {
     }
     @media (max-width: 600px) {
         div.pane > div.info {
-            justify-content: space-between;
-            width: 75%;
+            width: 50%;
             font-size: 0.8rem;
         }
     }

@@ -6,8 +6,6 @@
                     <p>
                         <strong>{{state.name}}</strong> <br />
                         Casos confirmados: {{state.confirmedCases}} <br />
-                        Casos suspeitos: {{state.suspiciousCases}} <br />
-                        Casos descartados: {{state.refuses}} <br />
                         Mortes: {{state.deaths}} 
                     </p>
                 </LPopup>
@@ -20,6 +18,7 @@
 
 import State from '../State';
 import { LCircle, LPopup } from 'vue2-leaflet';
+import EventBus from '../EventBus';
 
 export default {
     components: { LCircle, LPopup },
@@ -65,11 +64,11 @@ export default {
         setCovidInfo(statesArray) {
             for (let i = 0; i < statesArray.length; i++) {
                 this.states[statesArray[i].uf.toLowerCase()].setConfirmedCases(statesArray[i].cases);
-                this.states[statesArray[i].uf.toLowerCase()].suspiciousCases = statesArray[i].suspects;
                 this.states[statesArray[i].uf.toLowerCase()].deaths = statesArray[i].deaths;
                 this.states[statesArray[i].uf.toLowerCase()].name = statesArray[i].state;
-                this.states[statesArray[i].uf.toLowerCase()].refuses = statesArray[i].refuses;
+                this.states[statesArray[i].uf.toLowerCase()].uf = statesArray[i].uf;
             }
+            EventBus.$emit('setStatesData', this.states);
         }  
     }
 }

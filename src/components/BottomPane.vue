@@ -40,12 +40,13 @@ a{
 
 div.pane > div.info {
     bottom: 0;
+    width: 50%;
 }
 
 @media (max-width: 600px) {
     div.pane > div.info {
         width: 90%;
-        background-color: rgba(220, 120, 160, 0.9);
+        background-color: rgba(230, 140, 180, 0.9);
         box-sizing: border-box;
         border-style: none;
         border-top-style: dotted;
