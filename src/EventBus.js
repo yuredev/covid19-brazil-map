@@ -1,11 +1,5 @@
 import Vue from 'vue';
 
-const EventBus = new Vue({
-    data() {
-        return {
-            states: []
-        }
-    }
-});
+const EventBus = new Vue({});
 
 export default EventBus;
