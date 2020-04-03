@@ -1,19 +1,23 @@
 <h1 align="center">
-    <img src="src/assets/icon.png" width="25px"/> COVID-19 Brazil Map
+    <img src="src/assets/icon.png" width="25px" /> COVID-19 Brazil Map
 </h1>
 
 <p align="center">
     <img src="public/print.JPG" />
 </p>
 
-<p> 
-    <strong> Access in: </strong> 
-    <a href="https://brazilcovid19map.netlify.com">brazilcovid19map.netlify.com</a>
-</p>
-<p>
-    <strong> Origin of data: </strong> 
-    <a href="https://github.com/devarthurribeiro/covid19-brazil-api">devarthurribeiro/covid19-brazil-api</a>
-</p>
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+    <p> 
+        <strong> Access in: </strong> 
+        <a href="https://brazilcovid19map.netlify.com">brazilcovid19map.netlify.com</a>
+    </p>
+    <p>
+        <strong> Origin of data: </strong> 
+        <a href="https://github.com/devarthurribeiro/covid19-brazil-api">devarthurribeiro/covid19-brazil-api</a>
+    </p>
+</div>
+
+<hr>
 
 ## Project setup
 ```
