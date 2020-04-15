@@ -39,7 +39,7 @@ export default {
                 ms: new State(-55, -20.47),
                 mg: new State(-44.6, -18.85),
                 pr: new State(-51, -25),
-                pb: new State(-36.7, -7.2),
+                pb: new State(-35.8, -7.07),
                 pa: new State(-53.3, -4),
                 pe: new State(-37.5, -8.5),
                 pi: new State(-42.1, -7),
@@ -62,13 +62,18 @@ export default {
     },
     methods: {
         setCovidInfo(statesArray) {
+            let brazilCases = 0, brazilDeaths = 0;
             for (let i = 0; i < statesArray.length; i++) {
                 this.states[statesArray[i].uf.toLowerCase()].setConfirmedCases(statesArray[i].cases);
                 this.states[statesArray[i].uf.toLowerCase()].deaths = statesArray[i].deaths;
                 this.states[statesArray[i].uf.toLowerCase()].name = statesArray[i].state;
                 this.states[statesArray[i].uf.toLowerCase()].uf = statesArray[i].uf;
+
+                brazilCases += this.states[statesArray[i].uf.toLowerCase()].confirmedCases;
+                brazilDeaths += this.states[statesArray[i].uf.toLowerCase()].deaths;
             }
             EventBus.$emit('setStatesData', this.states);
+            EventBus.$emit('setBrazilData', brazilCases, brazilDeaths);
         }  
     }
 }

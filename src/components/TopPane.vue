@@ -2,19 +2,31 @@
     <div class="pane">
         <div class="info">
             <div>
-                Casos: {{brazilData.cases}}
+                Casos: {{cases}}
             </div>   
             <div>
-                Mortes: {{brazilData.deaths}}
+                Mortes: {{deaths}}
             </div> 
         </div>
     </div>
 </template>
 
 <script>
+
+import EventBus from '../EventBus';
+
 export default {
-    props: {
-        brazilData: Object
+    data() {
+        return { 
+            cases: undefined, 
+            deaths: undefined 
+        }
+    },
+    mounted() {
+        EventBus.$on('setBrazilData', (cases, deaths) => {
+            this.cases = cases;
+            this.deaths = deaths;
+        });
     }
 }
 </script>
