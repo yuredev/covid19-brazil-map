@@ -38,12 +38,12 @@ export default {
                 mt: new State(-56, -12.77),
                 ms: new State(-55, -20.47),
                 mg: new State(-44.6, -18.85),
-                pr: new State(-51, -25),
-                pb: new State(-35.8, -7.07),
+                pr: new State(-52.3, -25),
+                pb: new State(-35.2, -7.07),
                 pa: new State(-53.3, -4),
                 pe: new State(-37.5, -8.5),
                 pi: new State(-42.1, -7),
-                rn: new State(-36.3, -5.5),
+                rn: new State(-35.8, -5.5),
                 rs: new State(-53.3, -30.3),
                 rj: new State(-42.65, -22.6),
                 ro: new State(-63, -11.1),
@@ -55,10 +55,13 @@ export default {
             }
         }
     }, 
-    async mounted() {
-        const res = await fetch('https://covid19-brazil-api.now.sh/api/report/v1');
-        const states = await res.json();
-        this.setCovidInfo(states.data);
+    mounted() {
+        const promiseApi = fetch('https://covid19-brazil-api.now.sh/api/report/v1');
+        promiseApi.then(res => {
+            return res.json();
+        }).then(states => {
+            this.setCovidInfo(states.data);
+        });
     },
     methods: {
         setCovidInfo(statesArray) {

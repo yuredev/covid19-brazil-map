@@ -54,7 +54,6 @@ export default {
     mounted() {
         EventBus.$on('setStatesData', statesData => {
             this.states = statesData;
-            console.log(this.states);
         });
     },
 }
