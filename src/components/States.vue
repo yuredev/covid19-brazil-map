@@ -1,16 +1,14 @@
 <template>
     <div>
-        <template v-for="(state, key) of states">
-            <LCircle v-bind="states[key]" :key="key"> 
-                <LPopup>
-                    <p>
-                        <strong>{{state.name}}</strong> <br />
-                        Casos confirmados: {{state.confirmedCases}} <br />
-                        Mortes: {{state.deaths}} 
-                    </p>
-                </LPopup>
-            </LCircle>
-        </template>
+        <LCircle v-bind="states[key]" :key="key" v-for="(state, key) of states"> 
+            <LPopup>
+                <p>
+                    <strong>{{state.name}}</strong> <br />
+                    Casos confirmados: {{state.confirmedCases}} <br />
+                    Mortes: {{state.deaths}} 
+                </p>
+            </LPopup>
+        </LCircle>
     </div>
 </template>
 
