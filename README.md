@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-    Real time map of COVID-19 cases and deaths in Brazil 
+    Real time map of the COVID-19 cases and deaths in Brazil 
     <br/>
     Access: 
     <a align="center" href="https://brazilcovid19map.netlify.com">
