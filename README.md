@@ -2,20 +2,25 @@
     <img src="src/assets/icon.png" width="25px" /> COVID-19 Brazil Map
 </h1>
 
+<h3 align="center">
+    Real time map of COVID-19 cases and deaths in Brazil 
+    <br/>
+    Access: 
+    <a align="center" href="https://brazilcovid19map.netlify.com">
+        brazilcovid19map.netlify.com
+    </a>
+</h3>
+
 <p align="center">
-    <img src="public/print.JPG" />
+    <img src="screenshots/screenshot.png" />
 </p>
 
-<div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
-    <p> 
-        <strong> Access in: </strong> 
-        <a href="https://brazilcovid19map.netlify.com">brazilcovid19map.netlify.com</a>
-    </p>
-    <p>
-        <strong> Origin of data: </strong> 
-        <a href="https://github.com/devarthurribeiro/covid19-brazil-api">devarthurribeiro/covid19-brazil-api</a>
-    </p>
-</div>
+<h4 align="center">
+    <strong>
+        Source of data:
+    </strong>
+    <a href="https://github.com/devarthurribeiro/covid19-brazil-api">devarthurribeiro/covid19-brazil-api</a>
+</h4>
 
 <hr>
 
