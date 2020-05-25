@@ -1,19 +1,19 @@
 <template>
     <div class="ranking-container">
         <div @click="showRanking = !showRanking" class="show-ranking-button">
-            <span>Ranking</span>
+            <span>Estados</span>
             <img src="../assets/ranking-icon.png" alt="mostrar ranking">
         </div>
 
         <table v-show="showRanking">
             <tr>
-                <th>Posição</th>
+                <th v-if="isFirefox()">Posição</th>
                 <th>Estado</th>
                 <th>Casos</th>
                 <th>Mortes</th>
             </tr>
             <tr v-for="(state, index) of rankingOfStates" :key="state.uf">
-                <td>
+                <td v-if="isFirefox()">
                     <strong>
                         {{index+1}}°
                     </strong>
@@ -49,6 +49,9 @@ export default {
     methods: {
         formatPosition(i) {
             return i+1 > 9 ? i+1 : '0' + (i+1);
+        },
+        isFirefox() {
+            return this.$browserDetect.isFirefox;
         }
     },
     mounted() {

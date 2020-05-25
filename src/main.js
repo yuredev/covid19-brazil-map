@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
 import "leaflet/dist/leaflet.css"
+import browserDetect from "vue-browser-detect-plugin";
+
+Vue.use(browserDetect);
 
 import { Icon } from 'leaflet';
 
