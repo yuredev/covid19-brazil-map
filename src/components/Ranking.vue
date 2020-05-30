@@ -107,7 +107,7 @@ export default {
 .ranking-container table td {
   box-sizing: border-box;
   text-align: center;
-  padding: 2px 0px;
+  padding: 1px 0px;
 }
 
 .ranking-container .show-ranking-button {
