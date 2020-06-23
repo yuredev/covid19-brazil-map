@@ -4,7 +4,7 @@
       <div>Atualizado em: {{updatedAtFormated}}</div>
       <div>
         Desenvolvido por:
-        <a href="http://github.com/yurematias">Yure Matias</a>
+        <a href="http://github.com/yuredev">Yure Matias</a>
       </div>
     </div>
   </div>
