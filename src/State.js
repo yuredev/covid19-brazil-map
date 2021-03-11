@@ -16,12 +16,12 @@ class State {
     this.setStyle();
   }
   setStyle() {
-    if (this.confirmedCases < 40000) {
-      this.radius = 40000;
-    } else if (this.confirmedCases > 550000) {
-      this.radius = 550000;
+    if (this.confirmedCases < 70000) {
+      this.radius = 70000 / 2;
+    } else if (this.confirmedCases > 1000000) {
+      this.radius = 1000000 / 2;
     } else {
-      this.radius = this.confirmedCases ? this.confirmedCases : 0;  
+      this.radius = this.confirmedCases ? this.confirmedCases / 2 : 0;  
     }
   }
 }
